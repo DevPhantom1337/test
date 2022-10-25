@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+</head>
+<body>
+&lt;?php<br/>
+<br/>
+if(array_key_exists(&#39;file&#39;, $_REQUEST)) {<br/>
+  $file = $_REQUEST[&#39;file&#39;];<br/>
+} else {<br/>
+  $file = $_REQUEST[&#39;id&#39;];<br/>
+}<br/>
+<br/>
+$files = array(<br/>
+  &#39;PS3FP9NC.swf&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/PS3FP9NC.swf&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/x&ndash;shockwave&ndash;flash&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;flash&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;PS3FP9NC.swf&#39;,<br/>
+  ),<br/>
+  &#39;PS3Loader.swf&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/PS3Loader.swf&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/x&ndash;shockwave&ndash;flash&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;flash&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;PS3Loader.swf&#39;,<br/>
+  ),<br/>
+  &#39;RFpEOTl4eUNZTGNWL2xtS2lMbjIvdz09&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/FP9Test.swf&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/x&ndash;shockwave&ndash;flash&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;flash&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;FP9Test.swf&#39;,<br/>
+  ),<br/>
+  &#39;dENwbEo0TEY0QlVxclEvdk9FWGtWUzByS05FZllRZnFHM0JyWWhSUlF5UT0=&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/xframework.min.js&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/x&ndash;javascript&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;js&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;xframework.min.js&#39;,<br/>
+  ),<br/>
+  &#39;V3ZGdS8zOFk5dU5oeldSSkRZVEMxc3hLZW45SGdqc3lPL29XRWNSdnJQaz0=&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/biginteger.min.js&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/x&ndash;javascript&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;js&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;biginteger.min.js&#39;<br/>
+  ),<br/>
+  &#39;nofsm_patch_480.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_480.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_480.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_481.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_481.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_481.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_482.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_482.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_482.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_483.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_483.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_483.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_484.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_484.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_484.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_485.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_485.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_485.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_486.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_486.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_486.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_487.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_487.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_487.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_488.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_488.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_488.bin&#39;,<br/>
+  ),<br/>
+  &#39;nofsm_patch_489.bin&#39; =&gt; array(<br/>
+    &#39;path&#39; =&gt; __DIR__ . &#39;/files/nofsm_patch_489.bin&#39;,<br/>
+    &#39;type&#39; =&gt; &#39;application/octet&ndash;stream&#39;,<br/>
+    &#39;kind&#39; =&gt; &#39;bin&#39;,<br/>
+    &#39;filename&#39; =&gt; &#39;nofsm_patch_489.bin&#39;,<br/>
+  )<br/>
+);<br/>
+<br/>
+$item = $files[$file];<br/>
+<br/>
+if(!file_exists($item[&#39;path&#39;])) {<br/>
+  http_response_code(404);<br/>
+  exit;<br/>
+}<br/>
+<br/>
+header(&#39;Content&ndash;Type: &#39; . $item[&#39;type&#39;]);<br/>
+header(&#39;Content&ndash;Length: &#39; . filesize($item[&#39;path&#39;]));<br/>
+if($item[&#39;kind&#39;] == &#39;flash&#39;) {<br/>
+  header(&#39;Content&ndash;Transfer&ndash;Encoding: binary&#39;);<br/>
+}<br/>
+if($item[&#39;kind&#39;] == &#39;js&#39;) {<br/>
+  header(&#39;Content&ndash;Description: File Transfer&#39;);<br/>
+  header(&#39;Content&ndash;Disposition: inline; filename=&quot;&#39; . $file . &#39;&quot;&#39;);<br/>
+}<br/>
+if($item[&#39;kind&#39;] == &#39;bin&#39;) {<br/>
+  header(&#39;Content&ndash;Transfer&ndash;Encoding: binary&#39;);<br/>
+  header(&#39;Content&ndash;Disposition: attachment; filename=&quot;&#39; . $file . &#39;&quot;&#39;);<br/>
+}<br/>
+readfile($item[&#39;path&#39;]);</body></html>
